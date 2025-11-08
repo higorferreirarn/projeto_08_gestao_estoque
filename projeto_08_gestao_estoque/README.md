@@ -1,5 +1,15 @@
 # Projeto 08: Sistema de Gestão de Estoque
 
+**Disciplina:** Programação para Ciência de Dados
+**Curso:** MBA Ciência de Dados - UNIFOR
+**Instrutor:** Cássio Pinheiro
+**Integrantes:**
+- Higor Rafael Ferreira Nunes (Matrícula)
+- Carlos Emanuel de Sousa Silva (2528049)
+
+**Repositório GitHub:** https://github.com/higorferreirarn/projeto_08_gestao_estoque.git
+**Data de Entrega:** 14/11/2024
+
 ## 📋 Objetivo
 
 Desenvolver um sistema para gestão de estoque que permita cadastrar produtos, registrar movimentações (entrada/saída), calcular níveis de estoque, identificar produtos em falta e gerar relatórios de inventário.
@@ -60,6 +70,8 @@ estoque_atual = {
         'status': 'OK'  # ou 'EM FALTA'
     }
 }
+
+Formato dos arquivos de dados: (TXT)
 ```
 
 ## 💻 Requisitos Técnicos
@@ -80,6 +92,13 @@ estoque_atual = {
 - Calcule estoque atual somando entradas e subtraindo saídas
 - Use filter() para identificar produtos em falta
 - Implemente validações (não permitir saída maior que estoque)
+
+## Como Executar o Projeto
+
+Passo a passo para instalação
+Como executar o código principal
+Exemplos de uso
+Comandos necessários
 
 ## 🏗️ Esqueleto do Projeto
 
@@ -118,3 +137,9 @@ def main():
     pass
 ```
 
+## Análises Realizadas
+
+Descrição das análises realizadas
+Principais insights encontrados
+Visualizações criadas e seus propósitos
+Estatísticas calculadas
