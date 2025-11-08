@@ -8,7 +8,7 @@
 - Carlos Emanuel de Sousa Silva (2528049)
 
 **Repositório GitHub:** https://github.com/higorferreirarn/projeto_08_gestao_estoque.git
-**Data de Entrega:** 14/11/2024
+**Data de Entrega:** 14/11/2025
 
 ## 📋 Objetivo
 
