@@ -4,7 +4,7 @@
 **Curso:** MBA Ciência de Dados - UNIFOR
 **Instrutor:** Cássio Pinheiro
 **Integrantes:**
-- Higor Rafael Ferreira Nunes (Matrícula)
+- Higor Rafael Ferreira Nunes (2528955)
 - Carlos Emanuel de Sousa Silva (2528049)
 
 **Repositório GitHub:** https://github.com/higorferreirarn/projeto_08_gestao_estoque.git
