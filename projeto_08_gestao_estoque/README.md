@@ -1,5 +1,6 @@
 # Projeto 08: Sistema de Gestão de Estoque
 
+<<<<<<< HEAD
 **Disciplina:** Programação para Ciência de Dados
 **Curso:** MBA Ciência de Dados - UNIFOR
 **Instrutor:** Cássio Pinheiro
@@ -9,6 +10,9 @@
 
 **Repositório GitHub:** https://github.com/higorferreirarn/projeto_08_gestao_estoque.git
 **Data de Entrega:** 14/11/2025
+=======
+# Repositório: https://github.com/higorferreirarn/projeto_08_gestao_estoque.git
+>>>>>>> edfb42d (Atualizacao do README)
 
 ## 📋 Objetivo
 
