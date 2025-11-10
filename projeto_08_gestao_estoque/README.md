@@ -21,7 +21,7 @@ Desenvolver um sistema para gestão de estoque que permita cadastrar produtos, r
 ## 📊 Diagramas
 
 1. [Fluxograma do Sistema](diagramas/fluxo.md)  
-2. [Diagrama de Classes](diagramas/classes.md)  
+2. [Diagrama de Classes](diagramas/classe.md)  
 3. [Diagrama ER (Entidade-Relacionamento)](diagramas/relacionamento.md)
 
 
