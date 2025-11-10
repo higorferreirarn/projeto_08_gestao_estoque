@@ -18,24 +18,12 @@
 
 Desenvolver um sistema para gestão de estoque que permita cadastrar produtos, registrar movimentações (entrada/saída), calcular níveis de estoque, identificar produtos em falta e gerar relatórios de inventário.
 
-## 🗺️ Diagrama de Contexto
+## 📊 Diagramas
 
-```
-┌─────────────────────────────────────────────────────────┐
-│           Sistema de Gestão de Estoque                 │
-├─────────────────────────────────────────────────────────┤
-│  ┌──────────────┐    ┌──────────────┐                 │
-│  │  Produtos e  │───▶│  Processamento│                │
-│  │  Movimentações│    │  e Cálculos   │                │
-│  └──────────────┘    └──────────────┘                 │
-│         │                    │                        │
-│         │                    ▼                        │
-│         │    ┌──────────────────────────┐             │
-│         │    │  Níveis de Estoque e      │             │
-│         │    │  Alertas                  │             │
-│         │    └──────────────────────────┘             │
-└─────────────────────────────────────────────────────────┘
-```
+1. [Fluxograma do Sistema](diagramas/fluxo.md)  
+2. [Diagrama de Classes](diagramas/classes.md)  
+3. [Diagrama ER (Entidade-Relacionamento)](diagramas/relacionamento.md)
+
 
 ## 🔧 Funcionalidades Básicas
 
