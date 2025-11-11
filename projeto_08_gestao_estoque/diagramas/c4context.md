@@ -24,8 +24,8 @@
             System(SystemB, "Movimentações", "")
           }
 
-          System_Ext(SystemC, "E-mail system", "")
-          SystemDb(SystemD, "Database System")
+          System_Ext(SystemC, "Database System", "")
+          SystemDb(SystemD, "E-mail System")
 
           Boundary(b3, "BankBoundary3", "boundary") {
             SystemQueue(SystemF, "Alertas", "")
