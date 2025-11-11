@@ -20,16 +20,17 @@
           SystemDb_Ext(SystemE, "Usuarios", "")
 
           System_Boundary(b2, "BankBoundary2") {
-            System(SystemA, "Cadastrar Produto")
+            System(SystemA, "Calculos")
             System(SystemB, "Movimentações", "")
           }
 
           System_Ext(SystemC, "E-mail system", "")
-          SystemDb(SystemD, "Gestão de Estoque Database", "with personal accounts.")
+          SystemDb(SystemD, "Database System")
 
           Boundary(b3, "BankBoundary3", "boundary") {
-            SystemQueue(SystemF, "Cadastrar Produto", "Sistema de Gestão de Estoque.")
-            SystemQueue_Ext(SystemG, "Movimentações", "Sistema de Gestão de Estoque.")      }
+            SystemQueue(SystemF, "Alertas", "")
+            SystemQueue_Ext(SystemG, "Relatórios", "")      
+            }
         }
       }
 
