@@ -1,6 +1,5 @@
-# Projeto 08: Sistema de Gestão de Estoque
+<!-- # Projeto 08: Sistema de Gestão de Estoque -->
 
-<<<<<<< HEAD
 **Disciplina:** Programação para Ciência de Dados
 **Curso:** MBA Ciência de Dados - UNIFOR
 **Instrutor:** Cássio Pinheiro
@@ -10,9 +9,6 @@
 
 **Repositório GitHub:** https://github.com/higorferreirarn/projeto_08_gestao_estoque.git
 **Data de Entrega:** 14/11/2025
-=======
-# Repositório: https://github.com/higorferreirarn/projeto_08_gestao_estoque.git
->>>>>>> edfb42d (Atualizacao do README)
 
 ## 📋 Objetivo
 
@@ -23,7 +19,7 @@ Desenvolver um sistema para gestão de estoque que permita cadastrar produtos, r
 1. [Fluxograma do Sistema](diagramas/fluxo.md)  
 2. [Diagrama de Classes](diagramas/classe.md)  
 3. [Diagrama ER (Entidade-Relacionamento)](diagramas/relacionamento.md)
-
+4. [Diagrama de Contexto do Sistema C4](diagramas/c4context.md)
 
 ## 🔧 Funcionalidades Básicas
 
