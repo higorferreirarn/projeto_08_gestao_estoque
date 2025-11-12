@@ -1,0 +1,2 @@
+codigo;nome;categoria;quantidade;estoque_minimo;preco
+001;celular xyz;celulares;1;5;550.0

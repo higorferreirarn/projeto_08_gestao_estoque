@@ -1,0 +1,2 @@
+data;codigo;tipo;quantidade;data;motivo
+2025-11-11 21:58:22.174664;001;entrada;1;2025-11-11;compra

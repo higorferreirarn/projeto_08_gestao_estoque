@@ -9,20 +9,17 @@ class Estoque:
         self.movimentacoes = pd.DataFrame(columns=['data', 'codigo', 'tipo', 'quantidade', 'data', 'motivo'])
         self.carregar_dados()
 
-    '''Salvar Dados'''
     def salvar_dados(self):
         self.produtos.to_csv('dados/produtos.txt', sep=';', index=False)
         self.movimentacoes.to_csv('dados/movimentacoes.txt', sep=';', index=False)
         print("Dados salvos com sucesso.")
-    
-    '''Carregar Daddos'''
+
     def carregar_dados(self):
         if os.path.exists('dados/produtos.txt'):
             self.produtos = pd.read_csv('dados/produtos.txt', sep=';')
         if os.path.exists('dados/movimentacoes.txt'):
             self.movimentacoes = pd.read_csv('dados/movimentacoes.txt', sep=';')
-    
-    '''Cadastra novo produto.'''
+
     def cadastrar_produto(self, codigo, nome, categoria, estoque_minimo, preco):
         if codigo in self.produtos['codigo'].values:
             print("Produto já cadastrado.")
@@ -32,7 +29,6 @@ class Estoque:
         print(f"Produto '{nome}' cadastrado com sucesso.")
         self.salvar_dados()
 
-    '''Registra movimentação de estoque.'''
     def registrar_movimentacao(self, codigo, tipo, quantidade, data, motivo):
         if codigo not in self.produtos['codigo'].values:
             print("Produto não encontrado.")
@@ -52,13 +48,11 @@ class Estoque:
         self.movimentacoes = pd.concat([self.movimentacoes, nova_mov], ignore_index=True)
         print(f"Movimentação registrada: {tipo} de {quantidade} unidades do produto '{self.produtos.at[idx, 'nome']}'.")
         self.salvar_dados()
-    
-    '''Calcula estoque atual de um produto.'''
+
     def calcular_estoque_atual(self):
         print("\nNíveis de Estoque:")
         print(self.produtos[['codigo', 'nome', 'quantidade']].to_string(index=False))
-    
-    '''Identifica produtos abaixo do estoque mínimo.'''
+
     def identificar_produtos_em_falta(self):
         em_falta = self.produtos[self.produtos['quantidade'] <= self.produtos['estoque_minimo']]
         print("\nProdutos em falta ou abaixo do mínimo:")
@@ -66,13 +60,12 @@ class Estoque:
             print("Nenhum produto em falta.")
         else:
             print(em_falta[['codigo', 'nome', 'quantidade', 'estoque_minimo']].to_string(index=False))
-    
-    '''Gera relatório completo de inventário.'''
+
     def gerar_relatorio_inventario(self):
         print("\nRelatório de Inventário:")
         print(self.produtos.to_string(index=False))
+        
 
-'''Função principal.'''        
 def menu():
     estoque = Estoque()
     while True:
