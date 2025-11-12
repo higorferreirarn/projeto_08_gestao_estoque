@@ -1,2 +1,3 @@
-data;codigo;tipo;quantidade;data;motivo
-2025-11-11 21:58:22.174664;001;entrada;1;2025-11-11;compra
+data;codigo;tipo;quantidade;data.1;motivo
+2025-11-11 21:58:22.174664;1;entrada;1;2025-11-11;compra
+2025-11-12 14:30:28.136050;PROD002;entrada;3;2025-03-05;defeito

@@ -5,22 +5,32 @@ import os
 
 class Estoque:
     def __init__(self):
+        #Cainho absoluto pra pasta dados
+        self.base_dir = os.path.dirname(os.path.abspath(__file__))
+        self.dados_dir = os.path.join(self.base_dir, "dados")
+        os.makedirs(self.dados_dir, exist_ok=True)
+
+
         self.produtos = pd.DataFrame(columns=['codigo', 'nome', 'categoria', 'quantidade', 'estoque_minimo', 'preco'])
-        self.movimentacoes = pd.DataFrame(columns=['data', 'codigo', 'tipo', 'quantidade', 'data', 'motivo'])
+        self.movimentacoes = pd.DataFrame(columns=['data', 'codigo', 'tipo', 'quantidade', 'motivo'])
         self.carregar_dados()
 
     '''Salvar Dados'''
     def salvar_dados(self):
-        self.produtos.to_csv('dados/produtos.txt', sep=';', index=False)
-        self.movimentacoes.to_csv('dados/movimentacoes.txt', sep=';', index=False)
-        print("Dados salvos com sucesso.")
+        produtos_path = os.path.join(self.dados_dir, 'produtos.txt')
+        movs_path = os.path.join(self.dados_dir, 'movimentacoes.txt')
+        self.produtos.to_csv(produtos_path, sep=';', index=False)
+        self.movimentacoes.to_csv(movs_path, sep=';', index=False)
+        print("Dados salvos com sucesso!")
     
     '''Carregar Daddos'''
     def carregar_dados(self):
-        if os.path.exists('dados/produtos.txt'):
-            self.produtos = pd.read_csv('dados/produtos.txt', sep=';')
-        if os.path.exists('dados/movimentacoes.txt'):
-            self.movimentacoes = pd.read_csv('dados/movimentacoes.txt', sep=';')
+        produtos_path = os.path.join(self.dados_dir, 'produtos.txt')
+        movs_path = os.path.join(self.dados_dir, 'movimentacoes.txt')
+        if os.path.exists(produtos_path):
+            self.produtos = pd.read_csv(produtos_path, sep=';')
+        if os.path.exists(movs_path):
+            self.movimentacoes = pd.read_csv(movs_path, sep=';')
     
     '''Cadastra novo produto.'''
     def cadastrar_produto(self, codigo, nome, categoria, estoque_minimo, preco):
@@ -72,6 +82,13 @@ class Estoque:
         print("\nRelatório de Inventário:")
         print(self.produtos.to_string(index=False))
 
+    """Calcula o valor total do estoque."""
+    def calcular_valor_total_estoque(self):
+        self.produtos['valor_total'] = self.produtos['quantidade'] * self.produtos['preco']
+        total_geral = self.produtos['valor_total'].sum()
+        print(f"\n Valor total do estoque: R$ {total_geral:.2f}")
+        return total_geral
+
 '''Função principal.'''        
 def menu():
     estoque = Estoque()
@@ -82,19 +99,30 @@ def menu():
         print("3. Calcular Estoque do Produto")
         print("4. Identificar Produtos em Falta")
         print("5. Gerar Relatório de Inventário")
-        print("6. Sair")
+        print("6. Calcular Valor Total do Estoque")
+        print("7. Sair")
         opcao = input("Escolha uma opção: ")
         if opcao == '1':
             codigo = input("Código do produto: ")
             nome = input("Nome do produto: ")
             categoria = input("Nome da categoria: ")
-            minimo = int(input("Quantidade mínima: "))
-            preco = float(input("Valor: "))
+            try:
+                minimo = int(input("Quantidade mínima: "))
+                preco = (float(input("Valor: ")))
+            except ValueError:
+                print("Erro: Digite apenas números para quantidade e valor!")
+                continue #Volta para o menu
             estoque.cadastrar_produto(codigo, nome, categoria, minimo, preco)
+
         elif opcao == '2':
             codigo = input("Código do produto: ")
             tipo = input("Tipo (entrada/saida): ")
-            quantidade = int(input("Quantidade: "))
+            try:
+
+                quantidade = int(input("Quantidade: "))
+            except ValueError:
+                print("Erro: A quantidade deve ser um número!")
+                continue
             data = input("Data [XXXX-XX-XX]: ")
             motivo = input("Motivo: ")
             estoque.registrar_movimentacao(codigo, tipo, quantidade, data, motivo)
@@ -105,7 +133,9 @@ def menu():
         elif opcao == '5':
             estoque.gerar_relatorio_inventario()
         elif opcao == '6':
-            print("Saindo...")
+            estoque.calcular_valor_total_estoque()
+        elif opcao == '7':
+            print("Saindo do sistema")
             break
         else:
             print("Opção inválida.")
