@@ -12,7 +12,7 @@ class Estoque:
 
 
         self.produtos = pd.DataFrame(columns=['codigo', 'nome', 'categoria', 'quantidade', 'estoque_minimo', 'preco'])
-        self.movimentacoes = pd.DataFrame(columns=['data', 'codigo', 'tipo', 'quantidade', 'motivo'])
+        self.movimentacoes = pd.DataFrame(columns=['data', 'codigo', 'tipo', 'quantidade', 'data', 'motivo'])
         self.carregar_dados()
 
     '''Salvar Dados'''
