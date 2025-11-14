@@ -8,15 +8,41 @@
 
 ```mermaid
 flowchart TD
-    A[Início] --> B[Cadastrar Produto]
-    B --> C[Registrar Movimentação]
-    C --> D{Tipo de Movimentação?}
-    D -->|Entrada| E[Adicionar ao Estoque]
-    D -->|Saída| F[Remover do Estoque]
-    E --> G[Atualizar Quantidade]
-    F --> G
-    G --> H[Verificar Estoque Mínimo]
-    H -->|Abaixo do mínimo| I[Emitir Alerta]
-    H -->|Normal| J[Gerar Relatório]
-    I --> J
-    J --> K[Fim]
+    Start([Início])
+    Menu[/Exibe Menu Principal/]
+    Opcoes{Opção?}
+    CadastrarProduto[/Cadastrar Produto/]
+    RegistrarMov[/Registrar Movimentação/]
+    CalcularEstoque[/Calcular Estoque do Produto/]
+    ProdutosFalta[/Identificar Produtos em Falta/]
+    RelatorioInventario[/Gerar Relatório de Inventário/]
+    ValorTotalEstoque[/Calcular Valor Total do Estoque/]
+    RelatorioKardex[/Emitir Relatório Kardex/]
+    Top3Produtos[/Top 3 Produtos em Estoque/]
+    Sair([Sair])
+    Invalida[/Opção Inválida/]
+
+    Start --> Menu
+    Menu --> Op1
+
+    Opcoes -->|1| CadastrarProduto
+    Opcoes -->|2| RegistrarMov
+    Opcoes -->|3| CalcularEstoque
+    Opcoes -->|4| ProdutosFalta
+    Opcoes -->|5| RelatorioInventario
+    Opcoes -->|6| ValorTotalEstoque
+    Opcoes -->|7| RelatorioKardex
+    Opcoes -->|8| Top3Produtos
+    Opcoes -->|9| Sair
+    Opcoes -->|outra| Invalida
+
+    CadastrarProduto --> Menu
+    RegistrarMov --> Menu
+    CalcularEstoque --> Menu
+    ProdutosFalta --> Menu
+    RelatorioInventario --> Menu
+    ValorTotalEstoque --> Menu
+    RelatorioKardex --> Menu
+    Top3Produtos --> Menu
+    Invalida --> Menu
+```
