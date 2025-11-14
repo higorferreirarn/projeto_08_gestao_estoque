@@ -23,11 +23,67 @@ Desenvolver um sistema para gestão de estoque que permita cadastrar produtos, r
 
 ## 🔧 Funcionalidades Básicas
 
-1. **Cadastro de Produtos** - Registrar produtos (código, nome, categoria, estoque_mínimo, preço)
-2. **Movimentações** - Registrar entradas e saídas de estoque
-3. **Cálculos** - Calcular estoque atual, valor total do estoque, produtos em falta
-4. **Alertas** - Identificar produtos abaixo do estoque mínimo
-5. **Relatórios** - Relatório de inventário, produtos em falta, movimentações por período
+1. **Cadastro de Produtos** 
+Permite registrar produtos no estoque com:
+- código
+- nome
+- categoria
+- estoque mínimo
+- preço unitário
+
+**Método:** `cadastrar_produto(codigo, nome, categoria, estoque_minimo, preco)`
+
+2. **Movimentações**
+- Registra entradas e saídas de produtos.
+
+**Método:** `registrar_movimentacao(codigo, tipo, quantidade, data_mov, motivo)`
+
+3. **Cálculos** 
+- Calcula o estoque atual, valor total do estoque, produtos em falta
+
+**Método:** `calcular_estoque_atual()`
+
+4. **Alertas** 
+- Identifica produtos abaixo do estoque mínimo
+
+**Método:**
+`identificar_produtos_em_falta()`
+
+5. **Cálculo do Valor total do Estoque** 
+- Soma o valor de todos os produtos do estoque baseado em: > quantidade x preço unitário
+
+**Método**:
+`calcular_valor_total_estoque()`
+
+6. **Relatórios**
+- Gera relatório com valor total por item e exibe todos os produtos
+
+**Método:**
+`gerar_relatorio_inventario()`
+
+7. **Salvar Dados**
+- Salva os DataFrames em arquivos CSV separados por ';'
+
+**Método:** `salvar_dados()`
+
+8. **Carregar Dados**
+- Carrega os dados dos arquivos, se existirem, e faz tratamento de tipos
+
+**Método:**
+`carregar_dados()`
+
+9. **Relatório Kardex**
+- Gera relatório de movimentações (Kardex) para um produto específico
+
+**Método:**
+`emitir_relatorio_kardex()`
+
+10. **Top 3 Produtos**
+- Analisa e exibe os 3 produtos com maior quantidade em estoque usando numpy.
+
+**Método:**
+`top3_produtos_quantidade()`
+
 
 ## 📊 Estrutura de Dados
 
