@@ -7,7 +7,7 @@
 # 🔄 Fluxograma do Sistema de Gestão de Estoque
 
 ```mermaid
-flowchart TD
+flowchart LR
     Start([Início])
     Menu[/Exibe Menu Principal/]
     Opcoes{Opção}

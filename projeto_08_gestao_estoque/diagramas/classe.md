@@ -1,13 +1,10 @@
 
 ---
-
 ## 📄 diagramas/classes.md
-
-```markdown
 # 🧱 Diagrama de Classes
 
-```mermaid
 classDiagram
+    note "Classe Estoque"
     class Estoque {
         - DataFrame produtos
         - DataFrame movimentacoes
@@ -31,5 +28,4 @@ classDiagram
         + menu()
     }
 
-    Estoque <.. menu : usa
-```
+    Estoque <.. menu : Utiliza
