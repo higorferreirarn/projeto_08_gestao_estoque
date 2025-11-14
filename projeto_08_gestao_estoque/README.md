@@ -199,49 +199,49 @@ O objetivo foi fornecer uma visão abrangente e operacional do estoque, facilita
 
 ## Principais insights encontrados:
 
-Produtos em falta: 
+**Produtos em falta:** 
 
 O sistema identifica rapidamente quais produtos estão abaixo do estoque mínimo, permitindo ações preventivas para evitar indisponibilidade dos mesmos.
 
-Produtos mais estocados:
+**Produtos mais estocados:**
 
 É possível visualizar os três produtos com maior quantidade em estoque, deste modo, auxiliando para tomada de decisões.
 
-Movimentações detalhadas:
+**Movimentações detalhadas:**
 
 O relatório Kardex fornece o histórico completo de movimentações (entradas e saídas) de cada produto, facilitando auditorias e rastreabilidade.
 
-Valor total do estoque:
+**Valor total do estoque:**
 
 O cálculo automático do valor total do estoque permite avaliar o recurso investido em mercadorias.
 
-Cadastro e atualização eficiente:
+**Cadastro e atualização eficiente:**
 
 O sistema evita duplicidade de produtos e garante que todas as movimentações sejam registradas corretamente.
 
 ## Visualizações criadas e seus propósitos:
 
-Tabela de níveis de estoque: 
+**Tabela de níveis de estoque:** 
 
 Exibe o código, nome e quantidade atual de todos os produtos para monitoramento rápido.
 
-Tabela de produtos em falta: 
+**Tabela de produtos em falta:** 
 
 Lista produtos cuja quantidade está abaixo do mínimo definido, destacando itens críticos.
 
-Relatório de inventário: 
+**Relatório de inventário:** 
 
 Mostra todos os produtos com detalhes (código, nome, categoria, quantidade, estoque mínimo, preço e valor total por item), facilitando a análise patrimonial.
 
-Relatório Kardex: 
+**Relatório Kardex:** 
 
 Apresenta as movimentações (data, tipo, quantidade, saldo e motivo) de um produto específico ao longo do tempo.
 
-Top 3 produtos em estoque:
+**Top 3 produtos em estoque:**
 
 Lista os três produtos com maior quantidade disponível, útil para identificar itens com maior volume armazenado.
 
-Valor total do estoque: 
+**Valor total do estoque:** 
 
 Exibe o valor financeiro total investido no estoque.
 
