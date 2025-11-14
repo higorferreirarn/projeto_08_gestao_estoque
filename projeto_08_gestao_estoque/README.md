@@ -183,7 +183,10 @@ def main():
 
 ## Análises Realizadas
 
-Descrição das análises realizadas
-Principais insights encontrados
-Visualizações criadas e seus propósitos
+Descrição das análises realizadas:
+
+Principais insights encontrados:
+
+Visualizações criadas e seus propósitos:
+
 Estatísticas calculadas
