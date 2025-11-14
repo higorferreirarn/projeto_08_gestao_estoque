@@ -1,8 +1,10 @@
----
-title: Diagrama de Classes diagramas/classes.md
----
+
+## Diagrama de Contexto C4 para Sistema de Gestão de Estoque
+# diagramas/classe.md
+
+```mermaid
+
 classDiagram
-    note "Classe Estoque"
     class Estoque {
         - DataFrame produtos
         - DataFrame movimentacoes
@@ -27,3 +29,5 @@ classDiagram
     }
 
     Estoque <.. menu : Utiliza
+
+```
