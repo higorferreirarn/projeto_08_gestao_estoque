@@ -10,7 +10,7 @@
 flowchart TD
     Start([Início])
     Menu[/Exibe Menu Principal/]
-    Opcoes{Opção?}
+    Opcoes{Opção}
     CadastrarProduto[/Cadastrar Produto/]
     RegistrarMov[/Registrar Movimentação/]
     CalcularEstoque[/Calcular Estoque do Produto/]
@@ -23,7 +23,7 @@ flowchart TD
     Invalida[/Opção Inválida/]
 
     Start --> Menu
-    Menu --> Op1
+    Menu --> Opcoes
 
     Opcoes -->|1| CadastrarProduto
     Opcoes -->|2| RegistrarMov
