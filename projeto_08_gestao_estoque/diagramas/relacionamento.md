@@ -1,10 +1,5 @@
-
----
-
-## 📄 diagramas/relacionamento.md
-
-```markdown
-# 🧮 Diagrama Entidade-Relacionamento (ER)
+## diagramas/relacionamento.md
+# Diagrama Entidade-Relacionamento (ER)
 
 ```mermaid
 erDiagram
@@ -25,3 +20,5 @@ erDiagram
     }
 
     PRODUTO ||--o{ MOVIMENTACAO : "possui"
+    
+```

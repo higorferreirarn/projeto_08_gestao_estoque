@@ -1,5 +1,5 @@
-## 📄 diagramas/fluxo.md
-# 🔄 Fluxograma do Sistema de Gestão de Estoque
+## diagramas/fluxo.md
+# Fluxograma do Sistema de Gestão de Estoque
 
 ```mermaid
 flowchart LR

@@ -1,6 +1,5 @@
-
-## Diagrama de Contexto C4 para Sistema de Gestão de Estoque
 # diagramas/classe.md
+## Diagrama de Contexto C4 para Sistema de Gestão de Estoque
 
 ```mermaid
 

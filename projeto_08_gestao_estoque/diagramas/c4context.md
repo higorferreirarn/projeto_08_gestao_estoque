@@ -1,5 +1,5 @@
-## Diagrama de Contexto C4 para Sistema de Gestão de Estoque
 # diagramas/c4context.md
+## Diagrama de Contexto C4 para Sistema de Gestão de Estoque
 
 ```mermaid
 
@@ -15,4 +15,4 @@ System_Ext(arquivos, "Arquivos CSV (produtos.txt, movimentacoes.txt)", "Persist�
 Rel(usuario, sistema, "Utiliza via terminal (menu interativo)")
 Rel(sistema, arquivos, "Lê e grava dados de produtos e movimentações")
 
-````
+```
