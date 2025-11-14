@@ -45,4 +45,3 @@ flowchart TD
     RelatorioKardex --> Menu
     Top3Produtos --> Menu
     Invalida --> Menu
-```

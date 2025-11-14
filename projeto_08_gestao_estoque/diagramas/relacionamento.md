@@ -8,21 +8,20 @@
 
 ```mermaid
 erDiagram
-    PRODUTO ||--o{ MOVIMENTACAO : possui
     PRODUTO {
-        string codigo
+        string codigo PK
         string nome
         string categoria
         int estoque_minimo
-        float preco_unitario
+        float preco
     }
-
     MOVIMENTACAO {
-        string produto_codigo
+        int id PK
+        string codigo FK
         string tipo
         int quantidade
-        string data
+        date data_mov
         string motivo
     }
 
-    ESTOQUE ||--|| PRODUTO : controla
+    PRODUTO ||--o{ MOVIMENTACAO : "possui"
