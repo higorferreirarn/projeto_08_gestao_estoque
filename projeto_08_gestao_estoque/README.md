@@ -149,19 +149,19 @@ Comandos necessários
 ```python
 # sistema_estoque.py
 
-produtos = {}  # {codigo: dados_produto}
+produtos = []  # {codigo: dados_produto}
 movimentacoes = []  # Lista de movimentações
 
 def cadastrar_produto(codigo, nome, categoria, estoque_minimo, preco):
-    """Cadastra novo produto."""
+    """Cadastra novo produto"""
     pass
 
 def registrar_movimentacao(produto_codigo, tipo, quantidade, data, motivo):
-    """Registra movimentação de estoque."""
+    """Registra movimentação de estoque"""
     pass
 
 def calcular_estoque_atual(codigo):
-    """Calcula estoque atual de um produto."""
+    """Exibe o estoque atual de todos os produtos"""
     pass
 
 def identificar_produtos_em_falta():
@@ -169,12 +169,18 @@ def identificar_produtos_em_falta():
     pass
 
 def calcular_valor_total_estoque():
-    """Calcula valor total do estoque."""
+    """Calcula e exibe o valor total do estoque (soma de todos os itens)"""
     pass
 
 def gerar_relatorio_inventario():
-    """Gera relatório completo de inventário."""
+    """Gera relatório com valor total por item e exibe todos os produtos"""
     pass
+
+def top3_produtos_quantidade();
+    """Analisa e exibe os 3 produtos com maior quantidade em estoque"""
+
+def emitir_relatorio_kardex();
+    """Gera relatório de movimentações (Kardex) para um produto específico"""
 
 def main():
     """Função principal."""
@@ -183,10 +189,72 @@ def main():
 
 ## Análises Realizadas
 
-Descrição das análises realizadas:
+## Descrição das análises realizadas:
 
-Principais insights encontrados:
+Foram realizadas análises sobre o controle e movimentação de estoque de produtos, utilizando dados armazenados em arquivos TXT e manipulados via pandas.
 
-Visualizações criadas e seus propósitos:
+As análises incluíram o cadastro de produtos, registro de entradas e saídas, identificação de produtos em falta, cálculo do valor total do estoque, geração de relatórios de inventário e Kardex, além da identificação de ranking dos três produtos com maior quantidade em estoque. 
 
-Estatísticas calculadas
+O objetivo foi fornecer uma visão abrangente e operacional do estoque, facilitando a tomada de decisão e o acompanhamento do desempenho dos itens cadastrados.
+
+## Principais insights encontrados:
+
+Produtos em falta: 
+
+O sistema identifica rapidamente quais produtos estão abaixo do estoque mínimo, permitindo ações preventivas para evitar indisponibilidade dos mesmos.
+
+Produtos mais estocados:
+
+É possível visualizar os três produtos com maior quantidade em estoque, deste modo, auxiliando para tomada de decisões.
+
+Movimentações detalhadas:
+
+O relatório Kardex fornece o histórico completo de movimentações (entradas e saídas) de cada produto, facilitando auditorias e rastreabilidade.
+
+Valor total do estoque:
+
+O cálculo automático do valor total do estoque permite avaliar o recurso investido em mercadorias.
+
+Cadastro e atualização eficiente:
+
+O sistema evita duplicidade de produtos e garante que todas as movimentações sejam registradas corretamente.
+
+## Visualizações criadas e seus propósitos:
+
+Tabela de níveis de estoque: 
+
+Exibe o código, nome e quantidade atual de todos os produtos para monitoramento rápido.
+
+Tabela de produtos em falta: 
+
+Lista produtos cuja quantidade está abaixo do mínimo definido, destacando itens críticos.
+
+Relatório de inventário: 
+
+Mostra todos os produtos com detalhes (código, nome, categoria, quantidade, estoque mínimo, preço e valor total por item), facilitando a análise patrimonial.
+
+Relatório Kardex: 
+
+Apresenta as movimentações (data, tipo, quantidade, saldo e motivo) de um produto específico ao longo do tempo.
+
+Top 3 produtos em estoque:
+
+Lista os três produtos com maior quantidade disponível, útil para identificar itens com maior volume armazenado.
+
+Valor total do estoque: 
+
+Exibe o valor financeiro total investido no estoque.
+
+## Estatísticas calculadas:
+
+Quantidade atual de cada produto (soma das entradas menos saídas).
+
+Quantidade de produtos abaixo do estoque mínimo.
+
+Valor total por item (quantidade x preço unitário).
+
+Valor total do estoque (soma dos valores totais por item).
+
+Top 3 produtos com maior quantidade (identificados via ordenação decrescente).
+
+Histórico/Detalhamento de saldo por movimentação (Kardex: saldo atualizado após cada entrada/saída).
