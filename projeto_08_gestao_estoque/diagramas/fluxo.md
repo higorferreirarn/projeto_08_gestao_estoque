@@ -1,16 +1,11 @@
-
----
-
 ## 📄 diagramas/fluxo.md
-
-```markdown
 # 🔄 Fluxograma do Sistema de Gestão de Estoque
 
 ```mermaid
 flowchart LR
     Start([Início])
     Menu[/Exibe Menu Principal/]
-    Opcoes{Opção}
+    Opcao{Opções}
     CadastrarProduto[/Cadastrar Produto/]
     RegistrarMov[/Registrar Movimentação/]
     CalcularEstoque[/Calcular Estoque do Produto/]
@@ -23,18 +18,18 @@ flowchart LR
     Invalida[/Opção Inválida/]
 
     Start --> Menu
-    Menu --> Opcoes
+    Menu --> Opcao
 
-    Opcoes -->|1| CadastrarProduto
-    Opcoes -->|2| RegistrarMov
-    Opcoes -->|3| CalcularEstoque
-    Opcoes -->|4| ProdutosFalta
-    Opcoes -->|5| RelatorioInventario
-    Opcoes -->|6| ValorTotalEstoque
-    Opcoes -->|7| RelatorioKardex
-    Opcoes -->|8| Top3Produtos
-    Opcoes -->|9| Sair
-    Opcoes -->|outra| Invalida
+    Opcao -->|1| CadastrarProduto
+    Opcao -->|2| RegistrarMov
+    Opcao -->|3| CalcularEstoque
+    Opcao -->|4| ProdutosFalta
+    Opcao -->|5| RelatorioInventario
+    Opcao -->|6| ValorTotalEstoque
+    Opcao -->|7| RelatorioKardex
+    Opcao -->|8| Top3Produtos
+    Opcao -->|9| Sair
+    Opcao -->|Opção inexistente| Invalida
 
     CadastrarProduto --> Menu
     RegistrarMov --> Menu
@@ -45,3 +40,5 @@ flowchart LR
     RelatorioKardex --> Menu
     Top3Produtos --> Menu
     Invalida --> Menu
+
+```
