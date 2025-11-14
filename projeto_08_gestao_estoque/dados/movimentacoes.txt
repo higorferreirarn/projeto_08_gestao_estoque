@@ -1,3 +1,6 @@
-data;codigo;tipo;quantidade;data.1;motivo
-2025-11-11 21:58:22.174664;1;entrada;1;2025-11-11;compra
-2025-11-12 14:30:28.136050;PROD002;entrada;3;2025-03-05;defeito
+data_registro;codigo;tipo;quantidade;data_mov;motivo
+2025-11-14 09:57:12.273444;999;entrada;10;2025-11-14;compra
+2025-11-14 09:58:09.203753;999;saida;6;2025-11-14;venda
+2025-11-14 10:01:11.458626;998;entrada;8;2025-11-13;compra
+2025-11-14 10:09:52.642409;998;saida;3;2025-11-14;venda
+2025-11-14 13:14:17.940644;222;entrada;10;2025-11-14;compra

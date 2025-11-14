@@ -1,3 +1,4 @@
 codigo;nome;categoria;quantidade;estoque_minimo;preco
-1;celular xyz;celulares;1;5;550.0
-PROD002;Notebook Positivo;Informatica;3;3;2500.0
+999;IPHONE;CELULAR;4;5;3500.0
+998;SAMSUNG;CELULAR;5;5;2500.0
+222;NOKIA TIJOLAO;CELULAR;10;5;500.0
