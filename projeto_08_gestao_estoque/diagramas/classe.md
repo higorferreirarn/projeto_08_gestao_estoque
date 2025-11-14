@@ -1,8 +1,6 @@
-
 ---
-## 📄 diagramas/classes.md
-# 🧱 Diagrama de Classes
-
+title: Diagrama de Classes diagramas/classes.md
+---
 classDiagram
     note "Classe Estoque"
     class Estoque {
