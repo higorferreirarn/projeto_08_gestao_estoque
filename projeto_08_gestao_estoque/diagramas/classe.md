@@ -18,6 +18,7 @@ classDiagram
         + emitir_relatorio_kardex(codigo)
         + calcular_valor_total_estoque()
         + top3_produtos_quantidade()
+        + gera_relatorio_matplotlib()
     }
 
     Produto --> Estoque

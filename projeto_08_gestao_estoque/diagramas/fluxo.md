@@ -14,6 +14,7 @@ flowchart LR
     ValorTotalEstoque[/Calcular Valor Total do Estoque/]
     RelatorioKardex[/Emitir Relatório Kardex/]
     Top3Produtos[/Top 3 Produtos em Estoque/]
+    RelatorioPyplot[/Emitir Relatório Gráfico/]
     Sair([Sair])
     Invalida[/Opção Inválida/]
 
@@ -28,7 +29,8 @@ flowchart LR
     Opcao -->|6| ValorTotalEstoque
     Opcao -->|7| RelatorioKardex
     Opcao -->|8| Top3Produtos
-    Opcao -->|9| Sair
+    Opcao -->|9| RelatorioPyplot
+    Opcao -->|10| Sair
     Opcao -->|Opção inexistente| Invalida
 
     CadastrarProduto --> Menu
@@ -39,6 +41,7 @@ flowchart LR
     ValorTotalEstoque --> Menu
     RelatorioKardex --> Menu
     Top3Produtos --> Menu
+    RelatorioPyplot --> Menu
     Invalida --> Menu
 
 ```

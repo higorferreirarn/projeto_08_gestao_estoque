@@ -84,6 +84,11 @@ Permite registrar produtos no estoque com:
 **Método:**
 `top3_produtos_quantidade()`
 
+11. **Relatório Gráfico Pyplot**
+- Gera um gráfico da evolução do estoque do produto.
+
+**Método:**
+`gera_relatorio_matplotlib()`
 
 ## 📊 Estrutura de Dados
 
@@ -181,6 +186,9 @@ def top3_produtos_quantidade();
 
 def emitir_relatorio_kardex();
     """Gera relatório de movimentações (Kardex) para um produto específico"""
+
+    def gera_relatorio_matplotlib();
+    """Gera um gráfico da evolução do estoque do produto"""
 
 def main():
     """Função principal."""
