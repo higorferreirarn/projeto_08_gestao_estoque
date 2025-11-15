@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 import os
+import matplotlib.pyplot as plt
 
 class Estoque:
     def __init__(self):
@@ -142,6 +143,28 @@ class Estoque:
             produto = self.produtos.iloc[idx]
             print(f"Código: {produto['codigo']} | Nome: {produto['nome']} | Quantidade: {produto['quantidade']}")
 
+    def gera_relatorio_matplotlib(self, codigo: str) -> None:
+    # Gera um gráfico da evolução do estoque do produto.
+        movs_prod = self.movimentacoes[self.movimentacoes['codigo'].astype(str).str.strip() == codigo].copy()
+        if movs_prod.empty:
+            print("Nenhuma movimentação encontrada para este produto.")
+            return
+        movs_prod['data_mov'] = pd.to_datetime(movs_prod['data_mov'], errors='coerce')
+        movs_prod = movs_prod.sort_values('data_mov')
+        saldo = 0
+        saldos = []
+        for _, row in movs_prod.iterrows():
+            qtd = int(row['quantidade'])
+            saldo += qtd if row['tipo'] == 'entrada' else -qtd
+            saldos.append(saldo)
+        plt.plot(movs_prod['data_mov'], saldos, marker='o')
+        plt.title(f'Evolução do Estoque - Produto {codigo}')
+        plt.xlabel('Data')
+        plt.ylabel('Quantidade em Estoque')
+        plt.grid(True)
+        plt.savefig("relatorios/relatorio_pyplot.jpg",bbox_inches='tight')
+        plt.show()
+        
 def menu():
     estoque = Estoque()
     while True:
@@ -154,7 +177,8 @@ def menu():
         print("6. Calcular Valor Total do Estoque")
         print("7. Emitir Relatório Kardex de um Produto")
         print("8. Analisar Top 3 Produtos com Maior Quantidade")
-        print("9. Sair")
+        print("9. Emitir Relatório Gráfico(Pyplot)")
+        print("10. Sair")
         opcao = input("Escolha uma opção: ")
         
         if opcao == '1':
@@ -213,7 +237,11 @@ def menu():
              # Gera relatório com os 03 produtos com maior quantidade em estoque
              estoque.top3_produtos_quantidade()
         
-        elif opcao == '9':
+        elif opcao =='9':
+            codigo = input("Código do produto para relatório Gráfico: ")
+            estoque.gera_relatorio_matplotlib(codigo)
+
+        elif opcao == '10':
             # Sai do sistema
             print("Saindo do sistema")
             break
